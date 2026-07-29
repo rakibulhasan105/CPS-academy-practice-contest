@@ -1,0 +1,44 @@
+/*  আমার কাছে তোমার লেখা কোন চিঠি নেই, কোন প্রতিস্রতি নেই..
+ *  সাদায় কিন্তু অদ্ভুত তুমি..
+ */
+#include <bits/stdc++.h>
+#include <algorithm>
+using namespace std;
+#define fastio  cin.tie(0); ios_base ::sync_with_stdio(0);
+#define ll long long
+
+void phobia()
+{
+    ll n;
+    cin >> n;
+    if(n <10) {
+        cout << n << endl;
+        return;
+    }
+
+    string st = to_string(n);
+    int len = st.size();
+    int start = 1;
+    for (int i = 1; i < len; i++)
+         start *= 10;
+
+    int count = 9 * (len - 1);
+    count += (n / start);
+    cout << count << endl;
+
+
+     return;
+}
+
+int32_t main()
+{
+    fastio;
+    int tc = 1;
+    cin >> tc;
+    while (tc--)
+    {
+        phobia();
+    }
+
+    return 0; //         Hey, it's like a phobia..
+}
